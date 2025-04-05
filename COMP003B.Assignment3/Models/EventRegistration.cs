@@ -8,6 +8,10 @@ namespace COMP003B.Assignment3.Models
         [MinLength(3, ErrorMessage = "Name must contain 3 or more letters")]
         public string FullName { get; set; }
 
+        [Required(ErrorMessage = "Email is needed")]
+        [EmailAddress(ErrorMessage = "Not a real email")]
+        public string EmailAddress { get; set; }
+
 
     }
 
