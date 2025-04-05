@@ -11,6 +11,28 @@ namespace COMP003B.Assignment3.Controllers
             return View(new EventRegistration { EventCode = eventCode });
         }
 
+        [HttpGet("Event/Register")]
+        public IActionResult Register()
+        {
+            return View();
+        }
 
+        [HttpPost("Event/Register")]
+        public IActionResult Register(EventRegistration registration)
+        {
+            if (!ModelState.IsValid) 
+            {
+                return View(registration);
+            }
+
+            TempData["Registration"] = $"Thanks {registration.FullName} for {registration.Tickets} tickets!";
+            return RedirectToAction("Success");
+        }
+
+        [HttpGet("Event/Success")]
+        public IActionResult Success()
+        {
+            return View();
+        }
     }
 }
