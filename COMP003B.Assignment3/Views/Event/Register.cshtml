@@ -20,7 +20,20 @@
             <input asp-for="EmailAddress" type="email"> 
             <span asp-validation-for="EmailAddress"></span>
         </div>
+        <div>
+            <label>Event Code:</label>
+            <input asp-for="EventCode">
+        </div>
 
+        <div>
+            <label>How many tickets?</label>
+            <input asp-for="Tickets" type="number" min="1" max="10"> 
+        </div>
+
+        <div>
+            <label>Got a referral code?</label>
+            <input name="ReferralCode"> 
+        </div>
 
 
 
