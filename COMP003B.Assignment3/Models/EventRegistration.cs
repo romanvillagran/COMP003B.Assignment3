@@ -15,6 +15,8 @@ namespace COMP003B.Assignment3.Models
         [Required(ErrorMessage = "How many tickets")]
         [Range(1,10,ErrorMessage = "can get up to 10 tickets")]
         public int Tickets { get; set; }
+
+        public string PromoCode { get; set; }
     }
 
 }
