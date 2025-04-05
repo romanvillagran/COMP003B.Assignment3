@@ -16,7 +16,7 @@ namespace COMP003B.Assignment3.Models
         [Range(1,10,ErrorMessage = "can get up to 10 tickets")]
         public int Tickets { get; set; }
 
-        public string PromoCode { get; set; }
+        public string ReferralCode { get; set; }
     }
 
 }
