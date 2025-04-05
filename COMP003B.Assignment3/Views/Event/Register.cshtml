@@ -5,4 +5,24 @@
     Layout = "_Layout"; 
 }
 
+<div>
+    <h2 style="text-align: center;">Event Registration</h2>
 
+    <form>
+        <div>
+            <label for="FullName">Your Name:</label>
+            <input asp-for="FullName" type="text">
+            <span class="error-message"></span> 
+        </div>
+
+        <div>
+            <label>Email:</label>
+            <input asp-for="EmailAddress" type="email"> 
+            <span asp-validation-for="EmailAddress"></span>
+        </div>
+
+
+
+
+    </form>
+</div>
